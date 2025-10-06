@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Redirect 設定</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>URL Redirect 設定</h1>
+
+    <!-- ルール追加フォーム -->
+    <div class="add-rule-form">
+      <h2>新しいルールを追加</h2>
+      <div class="form-group">
+        <label for="ruleName">ルール名（任意）:</label>
+        <input type="text" id="ruleName" placeholder="例: 旧サイトから新サイトへ" />
+      </div>
+
+      <div class="form-group">
+        <label for="sourceUrl">リダイレクト元URL:</label>
+        <input type="text" id="sourceUrl" placeholder="https://example.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="targetUrl">リダイレクト先URL:</label>
+        <input type="text" id="targetUrl" placeholder="https://newsite.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="matchType">一致方法:</label>
+        <select id="matchType">
+          <option value="exact">完全一致</option>
+          <option value="partial">部分一致</option>
+          <option value="regex">正規表現</option>
+        </select>
+      </div>
+
+      <button id="addRuleBtn" class="btn btn-primary">ルールを追加</button>
+    </div>
+
+    <!-- ルール一覧 -->
+    <div class="rules-list">
+      <h2>登録済みルール</h2>
+      <div id="rulesList"></div>
+    </div>
+
+    <!-- ステータスメッセージ -->
+    <div id="statusMessage" class="status-message"></div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

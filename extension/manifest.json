@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "URL Redirect",
+  "version": "1.0.0",
+  "description": "特定のURLにアクセスしたとき、自動的に別のURLにリダイレクトする拡張機能",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {},
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}
